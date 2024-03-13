@@ -1,0 +1,124 @@
+
+a {color: purple;}
+
+#bolded {font-weight: bold;}
+
+td {
+    font-family: Arial;
+    background-color: #ffffff;
+}
+
+th {
+    font-family: Arial;
+    background-color: #f2f2f2;
+    color: #a057e6;
+}
+
+.centerParagraphs {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 50px;
+}
+
+p {
+    font-family: Helvetica;
+    margin: 0;
+    padding: 0;
+    text-align: justify;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 700px;
+}
+
+th, td {
+    border: 2px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+caption {
+    font-weight: bold;
+    font-family: Arial;
+    font-size: 20px;
+    margin-top: 90px;
+    margin-bottom: 5px;
+    padding: 10px;
+}
+
+h1 {
+    font-family: Arial;
+    font-size: 40px;
+    font-weight: normal;
+    margin-top: 70px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 700px;
+}
+
+h2 {
+    font-family: Arial;
+    font-size: 35px;
+    margin: 0;
+    padding: 2px;
+    padding-bottom: 0;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 700px;
+}
+
+h3 {
+    font-family: Arial;
+    font-size: 30px;
+    padding: 10px;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 700px;
+}
+
+table {
+    border-collapse: collapse;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    background-color: #a057e6;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+#secretButton {
+    background-color: #ffffff;
+    color: #ffffff;
+    margin-bottom: 70px;
+}
+
+#secret {
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 20px;
+}
+
