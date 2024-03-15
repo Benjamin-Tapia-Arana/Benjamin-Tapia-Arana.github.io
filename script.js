@@ -1,3 +1,4 @@
+
 function revealSecret() {
     var secretParagraph = document.getElementById("secret");
     var h1 = document.getElementsByTagName("h1");
@@ -18,8 +19,11 @@ function revealSecret() {
     for (var i = 0; i < h1.length; i++) {h1[i].style.color = "#a9fcc9";}
     for (var i = 0; i < h2.length; i++) {h2[i].style.color = "#a9fcc9";}
     for (var i = 0; i < h3.length; i++) {h3[i].style.color = "#a9fcc9";}
-    for (var i = 0; i < paragraphs.length; i++) {paragraphs[i].style.color = "#ffffff";}
     for (var i = 0; i < table.length; i++) {table[i].style.color = "#ffffff";}
+    for (var i = 0; i < paragraphs.length; i++) {
+        paragraphs[i].style.color = "#ffffff";
+        paragraphs[i].style.fontFamily = "sans-serif";
+    }
     for (var i = 0; i < th.length; i++) {
         th[i].style.backgroundColor = "#747474";
         th[i].style.borderRadius = "0px";
@@ -63,8 +67,11 @@ function hideSecret() {
     for (var i = 0; i < h1.length; i++) {h1[i].style.color = "#000000";}
     for (var i = 0; i < h2.length; i++) {h2[i].style.color = "#000000";}
     for (var i = 0; i < h3.length; i++) {h3[i].style.color = "#000000";}
-    for (var i = 0; i < paragraphs.length; i++) {paragraphs[i].style.color = "#000000";}
     for (var i = 0; i < table.length; i++) {table[i].style.color = "#000000";}
+    for (var i = 0; i < paragraphs.length; i++) {
+        paragraphs[i].style.color = "#000000";
+        paragraphs[i].style.fontFamily = "Arial";
+    }
     for (var i = 0; i < th.length; i++) {
         th[i].style.backgroundColor = "#f2f2f2";
         th[i].style.border = "2px solid #000000";
@@ -74,4 +81,9 @@ function hideSecret() {
         td[i].style.backgroundColor = "#ffffff";
         td[i].style.border = "2px solid #000000";
     }
+}
+
+function changeName(name) {
+    var header = document.getElementById("header");
+    header.innerHTML = name;
 }

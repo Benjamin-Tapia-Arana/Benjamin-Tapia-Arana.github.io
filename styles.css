@@ -3,6 +3,8 @@ a {color: purple;}
 
 #bolded {font-weight: bold;}
 
+label {margin-bottom: 10px;}
+
 td {
     font-family: Arial;
     background-color: #ffffff;
@@ -121,4 +123,3 @@ button {
     font-family: Arial;
     font-size: 20px;
 }
-
