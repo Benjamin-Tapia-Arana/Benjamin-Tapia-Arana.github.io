@@ -1,89 +1,32 @@
 
-function revealSecret() {
-    var secretParagraph = document.getElementById("secret");
-    var h1 = document.getElementsByTagName("h1");
-    var h2 = document.getElementsByTagName("h2");
-    var h3 = document.getElementsByTagName("h3");
-    var buttons = document.getElementsByTagName("button");
-    var body = document.body;
-    var paragraphs = document.getElementsByTagName("p");
-    var table = document.getElementsByTagName("table");
-    var th = document.getElementsByTagName("th");
-    var td = document.getElementsByTagName("td");
-    var normalB = document.getElementById("normalButton");
-    var link = document.getElementsByTagName("a");
-    secretParagraph.style.color = "#a9fcc9";
-    body.style.backgroundColor = "#5a5a5a";
-    link[0].style.color = "#81f3ad";
-    normalB.onclick = hideSecret;
-    for (var i = 0; i < h1.length; i++) {h1[i].style.color = "#a9fcc9";}
-    for (var i = 0; i < h2.length; i++) {h2[i].style.color = "#a9fcc9";}
-    for (var i = 0; i < h3.length; i++) {h3[i].style.color = "#a9fcc9";}
-    for (var i = 0; i < table.length; i++) {table[i].style.color = "#ffffff";}
-    for (var i = 0; i < paragraphs.length; i++) {
-        paragraphs[i].style.color = "#ffffff";
-        paragraphs[i].style.fontFamily = "sans-serif";
-    }
-    for (var i = 0; i < th.length; i++) {
-        th[i].style.backgroundColor = "#747474";
-        th[i].style.borderRadius = "0px";
-        th[i].style.border = "2px solid #5a5a5a";
-        th[i].style.color = "#a9fcc9";
-    }
-    for (var i = 0; i < td.length; i++) {
-        td[i].style.backgroundColor = "#848484";
-        td[i].style.borderRadius = "0px";
-        td[i].style.border = "2px solid #5a5a5a";
-    }
-    for (var i = 0; i < buttons.length; i++) {
-        buttons[i].style.backgroundColor = "#a9fcc9";
-        buttons[i].style.borderRadius = "10px";
-        buttons[i].style.color = "#000000";
-    }
-}
-
-function hideSecret() {
-    var secretParagraph = document.getElementById("secret");
-    var h1 = document.getElementsByTagName("h1");
-    var h2 = document.getElementsByTagName("h2");   
-    var h3 = document.getElementsByTagName("h3");
-    var body = document.body;
-    var paragraphs = document.getElementsByTagName("p");
-    var table = document.getElementsByTagName("table");
-    var th = document.getElementsByTagName("th");
-    var td = document.getElementsByTagName("td");
-    var normalB = document.getElementById("normalButton");
-    var secretB = document.getElementById("secretButton");
-    var link = document.getElementsByTagName("a");
-    body.style.backgroundColor = "#ffffff";
-    secretParagraph.style.color = "#ffffff";
-    link[0].style.color = "purple";
-    normalB.style.backgroundColor = "#a057e6";
-    normalB.style.borderRadius = "0px";
-    normalB.style.color = "#ffffff";
-    secretB.style.backgroundColor = "#ffffff";
-    secretB.style.color = "#ffffff";
-    normalB.onclick = revealSecret;
-    for (var i = 0; i < h1.length; i++) {h1[i].style.color = "#000000";}
-    for (var i = 0; i < h2.length; i++) {h2[i].style.color = "#000000";}
-    for (var i = 0; i < h3.length; i++) {h3[i].style.color = "#000000";}
-    for (var i = 0; i < table.length; i++) {table[i].style.color = "#000000";}
-    for (var i = 0; i < paragraphs.length; i++) {
-        paragraphs[i].style.color = "#000000";
-        paragraphs[i].style.fontFamily = "Arial";
-    }
-    for (var i = 0; i < th.length; i++) {
-        th[i].style.backgroundColor = "#f2f2f2";
-        th[i].style.border = "2px solid #000000";
-        th[i].style.color = "#a057e6";
-    }
-    for (var i = 0; i < td.length; i++) {
-        td[i].style.backgroundColor = "#ffffff";
-        td[i].style.border = "2px solid #000000";
-    }
-}
+var messagesList = ["Do not click me anymore!", "I told you not to click me!", "Stop it!", "I am warning you!", "I am going to reveal a secret if you keep clicking me!", "Are you sure you want to know the secret?", "I am going to tell you the secret!", "Here we go!", "The secret is..."];
+var messagesCounter = 0;
 
 function changeName(name) {
-    var header = document.getElementById("header");
-    header.innerHTML = name;
+    var header = document.getElementsByClassName("headerName");
+    for (var i = 0; i < header.length; i++) {header[i].innerHTML = name;}
+}
+
+function changeStudies(name) {
+    var header = document.getElementsByClassName("headerStudies");
+    for (var i = 0; i < header.length; i++) {header[i].innerHTML = name;}
+}
+
+function changeUniversity(name) {
+    var header = document.getElementsByClassName("headerUniversity");
+    for (var i = 0; i < header.length; i++) {header[i].innerHTML = name;}
+}
+
+function revealSecret() {
+    var principalButton = document.getElementsByClassName("ppal");
+    var secretButton = document.getElementsByClassName("sct");
+    var secretText = document.getElementsByClassName("text-secret");
+    for (var i = 0; i < principalButton.length; i++) {
+        principalButton[i].innerHTML = messagesList[messagesCounter];
+        if (messagesCounter < 8) {messagesCounter++;}
+        else {
+            for (var i = 0; i < secretButton.length; i++) {secretButton[i].classList.remove("sct");}
+            for (var i = 0; i < secretText.length; i++) {secretText[i].style.color = "#000000";}
+        }
+    }
 }
