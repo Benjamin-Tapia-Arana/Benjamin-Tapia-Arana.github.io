@@ -1,1 +1,3 @@
-# Benjamin-Tapia-Arana.github.io
+Laboratorios semanales "Web Technologies"
+
+Actualizado para semana 2
